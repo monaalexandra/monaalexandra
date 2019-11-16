@@ -1,0 +1,9 @@
+.footer {
+	background: color(primary,100);
+	color: color(secondary,100);
+	padding: 10px 0;
+
+	&__links {
+		color: color(secondary,100);
+	}
+}

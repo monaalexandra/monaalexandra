@@ -1,0 +1,50 @@
+table {
+	border: 1px solid;
+	width: 100%;
+}
+
+thead {
+	font-weight: 700;
+}
+
+th,
+td {
+	border: 1px solid;
+	padding: 0.5em;
+}
+
+.cookie-table {
+	overflow-y: auto;
+	position: relative;
+	background-attachment: local, local, scroll, scroll;
+	background-color: white;
+	background-image: linear-gradient(to right, white, white), linear-gradient(to right, white, white), linear-gradient(to right, rgba(0, 0, 0, 0.25), rgba(255, 255, 255, 0)), linear-gradient(to left, rgba(0, 0, 0, 0.25), rgba(255, 255, 255, 0));
+	background-position: left center, right center, left center, right center;
+	background-repeat: no-repeat;
+	background-size: 20px 100%, 20px 100%, 10px 100%, 10px 100%;
+
+	table {
+		min-width: 800px;
+	}
+
+	td:nth-child(1) {
+		width: 15%;
+	}
+
+	td:nth-child(2) {
+		width: 15%;
+	}
+
+	td:nth-child(3) {
+		width: 15%;
+	}
+
+	td:nth-child(4) {
+		width: 25%;
+		word-break: break-all;
+	}
+
+	td:nth-child(5) {
+		width: 30%;
+	}
+}

@@ -1,0 +1,34 @@
+/* responsive font sizing */
+
+html {
+	@include fluid-type($font-size-min-screen-width, $font-size-max-screen-width, $font-size-min, $font-size-max);
+}
+
+/* basic styles */
+
+body * {
+	-webkit-backface-visibility: hidden;
+	&:before, &:after { -webkit-backface-visibility: hidden; }
+}
+
+body {
+	background-color: #ffffff;
+	font-family: $font-text;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+}
+
+::selection {
+	background-color: color(primary,50);
+}
+
+.wrapper {
+	position: relative;
+	overflow: hidden;
+}
+
+.clear::after {
+	content: "";
+ 	display: table;
+ 	clear: both;
+}

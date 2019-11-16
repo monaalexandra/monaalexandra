@@ -1,0 +1,44 @@
+.bg-center {
+	background-position: center;
+	background-size: cover;
+}
+
+.text-align-center {
+	text-align: center;
+}
+
+.add-margin-bottom {
+	margin-bottom: 1rem;
+}
+
+/* padding */
+
+.add-padding,
+.add-padding-top {
+	padding-top: 5rem;
+}
+
+.add-padding,
+.add-padding-bottom {
+	padding-bottom: 5rem;
+}
+
+.add-padding--medium,
+.add-padding-top--medium {
+	padding-top: 3rem;
+}
+
+.add-padding--medium,
+.add-padding-bottom--medium {
+	padding-bottom: 3rem;
+}
+
+.add-padding--small,
+.add-padding-top--small {
+	padding-top: 1.5rem;
+}
+
+.add-padding--small,
+.add-padding-bottom--small {
+	padding-bottom: 1.5rem;
+}

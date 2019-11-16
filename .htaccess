@@ -1,0 +1,72 @@
+# BEGIN Define Error Documents
+	ErrorDocument 404 /404.php
+# END Define Error Documents
+
+# BEGIN 301 Redirects
+#	<IfModule mod_rewrite.c>
+#		RewriteEngine On
+#		RewriteRule ^kontakt/ http://www.neuedomain.de/kontakt/ [L,R=301]
+#	</IfModule>
+# END 301 Redirects
+
+# BEGIN https
+#	<IfModule mod_rewrite.c>
+#		RewriteEngine On
+#		RewriteCond %{HTTPS} !=on
+#		RewriteRule ^ https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
+#	</IfModule>
+# END https
+
+# BEGIN https
+	<IfModule mod_rewrite.c>
+		RewriteEngine On
+		RewriteCond %{REQUEST_FILENAME} !-f
+		RewriteRule ^([^/]+)/$ $1.php
+		RewriteRule ^([^/]+)/([^/]+)/$ /$1/$2.php
+		RewriteCond %{REQUEST_FILENAME} !-f
+		RewriteCond %{REQUEST_FILENAME} !-d
+		RewriteCond %{REQUEST_URI} !(\.[a-zA-Z0-9]{1,5}|/)$
+		RewriteRule (.*)$ /$1/ [R=301,L]
+	</IfModule>
+# END https
+
+# BEGIN GZIP
+	<ifmodule mod_deflate.c>
+		AddOutputFilterByType DEFLATE text/text text/html text/plain text/xml text/css application/x-javascript application/javascript image/svg+xml image/x-icon
+		AddType font/otf .otf
+		AddType font/ttf .ttf
+		AddType font/eot .eot
+		AddType font/woff .woff
+		AddType font/woff2 .woff2
+	</ifmodule>
+# END GZIP
+
+# BEGIN Browser Caching
+#	FileETag MTime Size
+#	<IfModule mod_expires.c>
+#    	ExpiresActive on
+#    	ExpiresByType text/plain "access plus 1 month"
+#   	ExpiresByType text/css "access plus 1 month"
+#    	ExpiresByType text/javascript "access plus 1 month"
+#    	ExpiresByType application/javascript "access plus 1 month"
+#    	ExpiresByType application/x-javascript "access plus 1 month"
+#    	ExpiresByType image/svg+xml "access plus 1 month"
+#    	ExpiresByType image/gif "access plus 1 month"
+#    	ExpiresByType image/png "access plus 1 month"
+#    	ExpiresByType image/ico "access plus 1 month"
+#    	ExpiresByType image/x-icon "access plus 1 month"
+#   	ExpiresByType image/jpg "access plus 1 month"
+#    	ExpiresByType image/jpe "access plus 1 month"
+#    	ExpiresByType image/jpeg "access plus 1 month"
+#    	ExpiresByType font/truetype "access plus 1 month"
+#    	ExpiresByType application/x-font-ttf "access plus 1 month"
+#    	ExpiresByType font/opentype "access plus 1 month"
+#    	ExpiresByType application/x-font-otf "access plus 1 month"
+#    	ExpiresByType application/font-woff "access plus 1 month"
+#    	ExpiresByType application/font-woff2 "access plus 1 month"
+#    	ExpiresByType application/vnd.ms-fontobject "access plus 1 month"
+#    	ExpiresByType application/x-shockwave-flash "access plus 1 month"
+#    	ExpiresByType application/x-httpd-php-source "access plus 1 month"
+#		ExpiresDefault "access plus 1 month"
+#	</IfModule>
+# END Browser Caching
