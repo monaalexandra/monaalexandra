@@ -1,6 +1,11 @@
 /* headlines */
 
-h1,h2,h3,h4,h5,h6 {
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
 	line-height: 1.2;
 	margin-top: 0;
 }
@@ -13,26 +18,14 @@ p + h6 {
 	margin-top: 2.25em;
 }
 
-h1,.look-like-h1 {
-	color: color(primary,100);
-	font-size: 3rem;
-	margin-bottom: 1em;
-	text-align: center;
-}
-
-h2,.look-like-h2 {
-	color: color(primary,100);
+h1,
+h2 {
 	font-size: 2rem;
-	font-weight: 600;
-	margin-bottom: 0.75em;
-	text-align: left;
-}
-
-h3,.look-like-h3 {
-	font-size: 1rem;
 	font-weight: bold;
-	margin-bottom: 0.5em;
-	text-align: left;
+
+	@media (min-width: $md) {
+		font-size: 4.5vw;
+	}
 }
 
 p,
@@ -40,49 +33,81 @@ ul,
 ol,
 table {
 	font-size: 0.85rem;
-	line-height: 1.5;
+	line-height: 1.4;
 	margin: 0 0 1em 0;
 
 	&:last-child {
 		margin-bottom: 0;
 	}
+
+	@media (min-width: $md) {
+		font-size: 1.75vw;
+	}
 }
 
-/* sup */
+.intro {
+	font-size: 1.15rem;
 
-sup {
-	white-space: nowrap; // prevent the sup notes breaking a line
+	@media (min-width: $md) {
+		font-size: 2.7vw;
+	}
 }
 
-/* small */
+/* mark */
 
-small {
-	display: block;
-	font-size: 0.5rem;
-	font-style: italic;
-	margin-bottom: 2.4em;
-}
+mark {
+	background-color: transparent;
+	position: relative;
 
-p small {
-	font-size: 0.9em;
-	margin-bottom: -1.2em;
-}
-
-.form small {
-	text-align: right;
+	&::after {
+		background-color: color(primary, 20);
+		bottom: 0.25em;
+		content: '';
+		height: 0.5em;
+		left: 0;
+		position: absolute;
+		right: 0;
+		width: 100%;
+		z-index: -1;
+	}
 }
 
 /* links */
 
 a {
-	border-bottom: 1px dotted;
-	color: color(primary,100);
-	display: inline-block;
-	text-decoration: none;
 	@include transition( all 0.3s );
 
+	background-color: transparent;
+	color: color(secondary,100);
+	display: inline;
+	position: relative;
+	text-decoration: none;
+	z-index: 1;
+
+	&::after {
+		background-color: color(primary, 20);
+		bottom: 0.25em;
+		content: '';
+		height: 0.5em;
+		left: 0;
+		position: absolute;
+		right: 0;
+		transition: all 0.3s;
+		width: 100%;
+		z-index: -1;
+	}
+
 	&:hover,
-	&:focus {
+&:focus {
+		color: color(the-light);
+		outline: 0;
+
+		&::after {
+			background-color: color(primary,100);
+			color: color(the-light);
+			height: 1.3em;
+			transform: translateY(0.3em);
+		}
 	}
 
 }
@@ -93,23 +118,26 @@ a[href^=tel] {
 
 .remove-link-style {
 	color: inherit;
-	border-bottom: 0;
 
-	&:hover,
-	&:focus {
+	&::after {
+		background-color: transparent;
+		position: static;
+		width: inherit;
 	}
 }
 
 /* lists */
 
-ul,ol {
+ul,
+ol {
 	list-style: none;
 	list-style-image: url(data:image/gif;10064,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7); // for IE10 and above. Read more here -> https://stackoverflow.com/questions/20356311/internet-explorer-11-ignores-list-stylenone-on-the-first-load
+	padding-left: 0;
 }
 
 li {
 	margin-bottom: 0.3em;
-	padding-left: 2.5em;
+	padding-left: 1.5em;
 	position: relative;
 }
 
@@ -129,13 +157,9 @@ ol li::before {
 }
 
 ul li::before {
-	background-color: color(primary,100);
-	content: '';
-	display: inline-block;
-	height: 2px;
-	margin-left: -2em;
-	margin-right: 0.7em;
-	position: relative;
-	top: -3px;
-	width: 1.3em;
+	content: '◆';
+	font-size: 0.7em;
+	left: 0;
+	position: absolute;
+	top: 0.3em;
 }

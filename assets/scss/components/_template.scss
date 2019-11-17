@@ -1,0 +1,56 @@
+.template {
+	border-left: $gutter solid color(primary,100);
+	border-right: $gutter solid color(the-light);
+	min-height: calc(100vh - #{4*$gutter});
+	padding: 2*$gutter $gutter;
+	position: relative;
+
+	@media (min-width: $md) {
+		border-left-width: $gutter-vw;
+		border-right-width: $gutter-vw;
+		min-height: calc(100vh - #{4*$gutter-vw});
+		padding: 2*$gutter-vw 3*$gutter-vw;
+	}
+
+	&--primary {
+		background-color: color(primary, 100);
+		border-right-color: color(primary,100);
+		color: color(the-light);
+	}
+
+	&--secondary {
+		background-color: color(secondary, 100);
+		border-right-color: color(secondary, 100);
+		color: color(the-light);
+
+		a {
+			color: color(primary,100);
+
+			&::after {
+				background-color: transparent;
+			}
+
+			&:hover,
+&:focus {
+				color: color(the-light);
+
+				& {
+					background-color: color(primary, 100);
+					color: color(the-light);
+				}
+			}
+		}
+	}
+
+	&__profile {
+		border-radius: 50%;
+		display: block;
+		margin: 0 auto 1.5rem;
+		width: 4rem;
+
+		@media (min-width: $md) {
+			margin-bottom: 3vw;
+			width: 8vw;
+		}
+	}
+}

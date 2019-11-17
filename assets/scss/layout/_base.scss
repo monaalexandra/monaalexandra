@@ -12,14 +12,14 @@ body * {
 }
 
 body {
-	background-color: #ffffff;
+	background-color: $white;
 	font-family: $font-text;
 	-webkit-font-smoothing: antialiased;
 	-moz-osx-font-smoothing: grayscale;
 }
 
 ::selection {
-	background-color: color(primary,50);
+	background-color: color(primary,40);
 }
 
 .wrapper {

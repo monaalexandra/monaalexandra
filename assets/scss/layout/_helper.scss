@@ -1,15 +1,4 @@
-.bg-center {
-	background-position: center;
-	background-size: cover;
-}
 
-.text-align-center {
-	text-align: center;
-}
-
-.add-margin-bottom {
-	margin-bottom: 1rem;
-}
 
 /* padding */
 
@@ -41,4 +30,14 @@
 .add-padding--small,
 .add-padding-bottom--small {
 	padding-bottom: 1.5rem;
+}
+
+/* mail encryption */
+
+.these-are-not-the-droids-youre-looking-for {
+	@extend .remove-link-style;
+
+	&::after {
+		content: attr(data-name) '@'attr(data-domain) '.'attr(data-tld);
+	}
 }

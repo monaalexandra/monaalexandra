@@ -13,15 +13,14 @@ $base-url: '../';
 //@include font-face( Glacial Indifference, '../fonts/glacialindifference-regular-webfont', 400 );
 //@include font-face( Glacial Indifference, '../fonts/glacialindifference-italic-webfont', 400, italic );
 
-$font-headline: Cabin, Helvetica, Arial, sans-serif;
-$font-text: Noto Serif, Times, serif;
+$font-text: 'BlackerPro', Times, serif;
 
 /*
 	Fluid font-size setup
 	More info about this here: https://css-tricks.com/snippets/css/fluid-typography/
 */
-$font-size-min-screen-width: 550px;
-$font-size-max-screen-width: 1400px;
+$font-size-min-screen-width: 400px;
+$font-size-max-screen-width: 1000px;
 $font-size-min: 16px;
 $font-size-max: 26px;
 
@@ -34,50 +33,50 @@ $font-size-max: 26px;
 	Color maps: https://codepen.io/jakealbaugh/post/using-sass-functions-to-access-complex-variable-maps
 	Usage: color(primary,base)
 */
-$color-primary: tomato;
-$color-secondary: #0969A2;
+$color-primary: #e10100;
+$color-secondary: #000;
+$white: #fbf9f7;
 $color-mix-amount: 10%;
 
 $colors: (
 	primary: (
 		100: $color-primary,
-		90: mix(white, $color-primary, $color-mix-amount*1),
-		80: mix(white, $color-primary, $color-mix-amount*2),
-		70: mix(white, $color-primary, $color-mix-amount*3),
-		60: mix(white, $color-primary, $color-mix-amount*4),
-		50: mix(white, $color-primary, $color-mix-amount*5),
-		40: mix(white, $color-primary, $color-mix-amount*6),
-		30: mix(white, $color-primary, $color-mix-amount*7),
-		20: mix(white, $color-primary, $color-mix-amount*8),
-		10: mix(white, $color-primary, $color-mix-amount*9),
+		90: mix($white, $color-primary, $color-mix-amount*1),
+		80: mix($white, $color-primary, $color-mix-amount*2),
+		70: mix($white, $color-primary, $color-mix-amount*3),
+		60: mix($white, $color-primary, $color-mix-amount*4),
+		50: mix($white, $color-primary, $color-mix-amount*5),
+		40: mix($white, $color-primary, $color-mix-amount*6),
+		30: mix($white, $color-primary, $color-mix-amount*7),
+		20: mix($white, $color-primary, $color-mix-amount*8),
+		10: mix($white, $color-primary, $color-mix-amount*9),
 	),
 	secondary: (
 		100: $color-secondary,
-		90: mix(white, $color-secondary, $color-mix-amount*1),
-		80: mix(white, $color-secondary, $color-mix-amount*2),
-		70: mix(white, $color-secondary, $color-mix-amount*3),
-		60: mix(white, $color-secondary, $color-mix-amount*4),
-		50: mix(white, $color-secondary, $color-mix-amount*5),
-		40: mix(white, $color-secondary, $color-mix-amount*6),
-		30: mix(white, $color-secondary, $color-mix-amount*7),
-		20: mix(white, $color-secondary, $color-mix-amount*8),
-		10: mix(white, $color-secondary, $color-mix-amount*9),
+		90: mix($white, $color-secondary, $color-mix-amount*1),
+		80: mix($white, $color-secondary, $color-mix-amount*2),
+		70: mix($white, $color-secondary, $color-mix-amount*3),
+		60: mix($white, $color-secondary, $color-mix-amount*4),
+		50: mix($white, $color-secondary, $color-mix-amount*5),
+		40: mix($white, $color-secondary, $color-mix-amount*6),
+		30: mix($white, $color-secondary, $color-mix-amount*7),
+		20: mix($white, $color-secondary, $color-mix-amount*8),
+		10: mix($white, $color-secondary, $color-mix-amount*9),
 	),
-	text-flow: #000000
+	text-flow: $color-secondary,
+	the-light: $white
 );
 
 
 // SET MEDIA QUERY BREAK POINTS
 $sm: 600px !default; 					// Set xs breakpoint's min width
-$md: 900px !default; 					// Set sm breakpoint's min width
+$md: 1000px !default; 					// Set sm breakpoint's min width
 $lg: 1200px !default; 					// Set md breakpoint's min width
 $xl: 1500px !default; 					// Set lg breakpoint's min width
 
 // SET GRID VARIABLES
-$grid-columns: 12 !default; 			// Set number of columns in the grid
-$row-max-width: 1400px !default; 		// Set the max-width of row
-$row-gutter-width: 1rem !default;		// Set row padding
-$gutter: 1.5rem !default; 				// Set gutter size
+$gutter: 2rem; 							// Set gutter size
+$gutter-vw: 5vw;
 
 
 // GRID CLASSES

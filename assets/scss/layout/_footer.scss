@@ -1,9 +1,30 @@
 .footer {
-	background: color(primary,100);
-	color: color(secondary,100);
-	padding: 10px 0;
+	bottom: 0;
+	font-size: 0.7rem;
+	font-weight: bold;
+	left: 0;
+	opacity: 0.5;
+	padding: 0.5em $gutter;
+	position: absolute;
+	right: 0;
+	text-align: center;
 
-	&__links {
-		color: color(secondary,100);
+	@media (min-width: $md) {
+		font-size: 1.2vw;
+		padding-left: $gutter-vw;
+		padding-right: $gutter-vw;
+	}
+
+	a {
+		color: color(the-light);
+
+		&::after {
+			background-color: transparent;
+		}
+
+		&:hover::after,
+&:focus::after {
+			background-color: color(primary,100);
+		}
 	}
 }
