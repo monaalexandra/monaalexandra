@@ -1,9 +1,9 @@
 .footer {
 	bottom: 0;
+	color: rgba(color(the-light), 0.5);
 	font-size: 0.7rem;
 	font-weight: bold;
 	left: 0;
-	opacity: 0.5;
 	padding: 0.5em $gutter;
 	position: absolute;
 	right: 0;
@@ -17,15 +17,18 @@
 	}
 
 	a {
-		color: color(the-light);
+		color: rgba(color(the-light),0.5);
 
-		&::after {
+		&:hover,
+&:focus,
+&::after {
 			background-color: transparent;
 		}
 
 		&:hover::after,
 &:focus::after {
-			background-color: color(primary,100);
+			background-color: transparent;
+			color: color(the-light);
 		}
 	}
 }
