@@ -1,0 +1,36 @@
+.nav {
+	background-color: color(secondary,100);
+	height: calc(100vh - #{2*$gutter});
+	left: 0;
+	padding: $gutter;
+	position: fixed;
+	top: 0;
+	width: calc(100vw - #{2*$gutter});
+	z-index: 20;
+
+	@media (min-width: $md) {
+		padding: 2*$gutter-vw 3*$gutter-vw;
+	}
+
+	&__item {
+		text-align: center;
+
+		&__link {
+			color: color(the-light);
+			font-size: 1.5rem;
+			font-weight: bold;
+
+			&::after {
+				background-color: transparent;
+			}
+		}
+	}
+}
+
+.hamburger {
+	height: $gutter;
+	position: absolute;
+	right: $gutter;
+	top: $gutter;
+	width: $gutter;
+}
