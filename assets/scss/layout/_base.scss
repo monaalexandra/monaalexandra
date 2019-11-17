@@ -8,12 +8,15 @@ html {
 
 body * {
 	-webkit-backface-visibility: hidden;
-	&:before, &:after { -webkit-backface-visibility: hidden; }
+	&:before,
+&:after { -webkit-backface-visibility: hidden; }
 }
 
 body {
 	background-color: $white;
+	cursor: none;
 	font-family: $font-text;
+
 	-webkit-font-smoothing: antialiased;
 	-moz-osx-font-smoothing: grayscale;
 }
@@ -23,12 +26,12 @@ body {
 }
 
 .wrapper {
-	position: relative;
 	overflow: hidden;
+	position: relative;
 }
 
 .clear::after {
-	content: "";
- 	display: table;
  	clear: both;
+	content: '';
+ 	display: table;
 }
