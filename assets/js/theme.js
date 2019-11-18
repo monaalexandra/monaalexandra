@@ -13,4 +13,6 @@ function moveMouse(e) {
 }
 
 // check for when the mouse is being moving
-document.addEventListener("mousemove", moveMouse);
+if ( !Modernizr.touchevents ) {
+	document.addEventListener("mousemove", moveMouse);
+}
