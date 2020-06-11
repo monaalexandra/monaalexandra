@@ -1,0 +1,957 @@
+@charset "UTF-8";
+/*
+	This creats the source strings for fonts
+	@include font-face(MavenPro, 'fonts/maven-pro/regular/maven-pro-regular-webfont', 100);
+*/
+/*
+	thanks to: https://github.com/matthieua/sass-css3-mixins/blob/master/css3-mixins.scss
+	@include css3-prefix(transform,all 0.3s ease-in-out 0s);
+*/
+/*
+	@include transition (all 2s ease-in);
+	@include transition (opacity 1s ease-in 2s, width 2s ease-out);
+*/
+/*
+	@include transform(rotate(90deg));
+*/
+/*
+	From https://css-tricks.com/snippets/sass/mixin-offset-positioning/
+
+	@param {String} $position - Either `relative`, `absolute` or `fixed`
+	@param {Length} $top [null] - Top offset
+	@param {Length} $right [null] - Right offset
+	@param {Length} $bottom [null] - Bottom offset
+	@param {Length} $left [null] - Left offset
+
+	@include position(absolute, $top: 1em, $left: 50%);
+	OR
+	@include position(absolute, 1em, auto, auto, 50%);
+*/
+/*
+	From https://engageinteractive.co.uk/blog/top-10-scss-mixins
+*/
+/*
+	retrieve color from $colors map ie. `color(base, primary)`
+	https://codepen.io/jakealbaugh/post/using-sass-functions-to-access-complex-variable-maps
+*/
+/*
+	This creats the source strings for fonts
+	Reference: http://goo.gl/Ru1bKP
+	And: http://www.sassmeister.com/gist/5b76b269b32cca33dbeb
+
+	Is used to creat the font-face mixin
+*/
+/*
+	CSS cubic-bezier timing functions. Timing functions courtesy of jquery.easie (github.com/jaukia/easie)
+
+	Timing functions are the same as demoed here: http://jqueryui.com/resources/demos/effect/easing.html
+*/
+/*
+	Used for example in the rem-function. PLEASE read the notices in before using the rem-function!!
+*/
+/*
+	When you have declared your fonts, remember to set them as preload objects in header.php
+	Source: https://www.bramstein.com/writing/preload-hints-for-web-fonts.html
+*/
+/*
+	Fluid font-size setup
+	More info about this here: https://css-tricks.com/snippets/css/fluid-typography/
+*/
+/*
+	http://razorltd.github.io/sasscolourfunctioncalculator/
+	for desaturate option: if the number is '50.8333' you have to move the decimal to '0.5083'
+
+	Color maps: https://codepen.io/jakealbaugh/post/using-sass-functions-to-access-complex-variable-maps
+	Usage: color(primary,base)
+*/
+/*
+ * Helpful guidem if you ever get lost: https://css-tricks.com/snippets/css/a-guide-to-flexbox/
+
+.remove-gutter					// sets padding l/r 0
+
+.row 							// default is "flex-wrap: nowrap" and "align-items: stretch"
+
+.row--row-xs					// display items as row left to right (DEFAULT)
+.row--row-reverse-xs			// display items as row right to left
+.row--column-xs					// display items as column top to bottom
+.row--column-reverse-xs			// display items as column bottom to top
+
+.row--wrap-xs					// make items wrap (DEFAULT)
+.row--wrap-reverse 				// make items wrap, but from bottom
+.row--no-wrap-xs				// make items stay in a row
+
+JUSTIFY-CONTENT
+.row--start-xs					// items are packed toward the start (DEFAULT)
+.row--center-xs					// items are centered
+.row--end-xs					// items are packed toward the end
+.row--between-xs				// items are evenly distributed
+.row--around-xs					// items are evenly distributed with equal space on both sides
+.row--evenly-xs					// items are distributed so that any spacing is euqal
+
+ALIGN ITEMS
+.row--items-top-xs				// vertical align items at their top
+.row--items-middle-xs			// vertical align items at their middle
+.row--items-bottom-xs			// vertical align items at their bottom
+.row--items-stretch-xs			// make items the same height as container (DEFAULT)
+
+ALIGN CONTENT
+.row--content-top-xs			// lines packed to the start of the container
+.row--content-middle-xs			// lines packed to the end of the container
+.row--content-bottom-xs			// lines packed to the center of the container
+.row--content-stretch-xs		// lines evenly distributed; the first line is at the start of the container while the last one is at the end (DEFAULT)
+.row--content-between-xs		// lines evenly distributed with equal space around each line
+.row--content-around-xs			// lines stretch to take up the remaining space
+
+COLUMNS
+.col-xs-1						// starts from 0
+.col-sm-1
+.col-md-1
+.col-lg-1
+.col-xl-1
+
+.col-xs-offset-1				// offsets column with specified amount
+.col-sm-offset-2
+.col-md-offset-1
+.col-lg-offset-1
+.col-xl-offset-1
+
+ORDER
+.col--first-xs					// make this item the first, regardless of html markup
+.col--last-xs					// make this item the last, regardless of html markup
+
+ALIGN SELF
+.col--align-top-xs				// overrides alignment set by the contianer for this item
+.col--align-middle-xs			// overrides alignment set by the contianer for this item
+.col--align-bottom-xs			// overrides alignment set by the contianer for this item
+.col--align-stretch-xs			// overrides alignment set by the contianer for this item
+*/
+/*! normalize.css v3.0.2 | MIT License | git.io/normalize */
+/**
+ * 1. Set default font family to sans-serif.
+ * 2. Prevent iOS text size adjust after orientation change, without disabling
+ *    user zoom.
+ */
+html {
+  font-family: sans-serif;
+  /* 1 */
+  -ms-text-size-adjust: 100%;
+  /* 2 */
+  -webkit-text-size-adjust: 100%;
+  /* 2 */
+}
+
+/**
+ * Remove default margin.
+ */
+body {
+  margin: 0;
+}
+
+/* HTML5 display definitions
+   ========================================================================== */
+/**
+ * Correct `block` display not defined for any HTML5 element in IE 8/9.
+ * Correct `block` display not defined for `details` or `summary` in IE 10/11
+ * and Firefox.
+ * Correct `block` display not defined for `main` in IE 11.
+ */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+main,
+menu,
+nav,
+section,
+summary {
+  display: block;
+}
+
+/**
+ * 1. Correct `inline-block` display not defined in IE 8/9.
+ * 2. Normalize vertical alignment of `progress` in Chrome, Firefox, and Opera.
+ */
+audio,
+canvas,
+progress,
+video {
+  display: inline-block;
+  /* 1 */
+  vertical-align: baseline;
+  /* 2 */
+}
+
+/**
+ * Prevent modern browsers from displaying `audio` without controls.
+ * Remove excess height in iOS 5 devices.
+ */
+audio:not([controls]) {
+  display: none;
+  height: 0;
+}
+
+/**
+ * Address `[hidden]` styling not present in IE 8/9/10.
+ * Hide the `template` element in IE 8/9/11, Safari, and Firefox < 22.
+ */
+[hidden],
+template {
+  display: none;
+}
+
+/* Links
+   ========================================================================== */
+/**
+ * Remove the gray background color from active links in IE 10.
+ */
+a {
+  background-color: transparent;
+}
+
+/**
+ * Improve readability when focused and also mouse hovered in all browsers.
+ */
+a:active,
+a:hover {
+  outline: 0;
+}
+
+/* Text-level semantics
+   ========================================================================== */
+/**
+ * Address styling not present in IE 8/9/10/11, Safari, and Chrome.
+ */
+abbr[title] {
+  border-bottom: 1px dotted;
+}
+
+/**
+ * Address style set to `bolder` in Firefox 4+, Safari, and Chrome.
+ */
+b,
+strong {
+  font-weight: bold;
+}
+
+/**
+ * Address styling not present in Safari and Chrome.
+ */
+dfn {
+  font-style: italic;
+}
+
+/**
+ * Address variable `h1` font-size and margin within `section` and `article`
+ * contexts in Firefox 4+, Safari, and Chrome.
+ */
+h1 {
+  font-size: 2em;
+  margin: 0.67em 0;
+}
+
+/**
+ * Address styling not present in IE 8/9.
+ */
+mark {
+  background: #ff0;
+  color: #000;
+}
+
+/**
+ * Address inconsistent and variable font size in all browsers.
+ */
+small {
+  font-size: 80%;
+}
+
+/**
+ * Prevent `sub` and `sup` affecting `line-height` in all browsers.
+ */
+sub,
+sup {
+  font-size: 75%;
+  line-height: 0;
+  position: relative;
+  vertical-align: baseline;
+}
+
+sup {
+  top: -0.5em;
+}
+
+sub {
+  bottom: -0.25em;
+}
+
+/* Embedded content
+   ========================================================================== */
+/**
+ * Remove border when inside `a` element in IE 8/9/10.
+ */
+img {
+  border: 0;
+}
+
+/**
+ * Correct overflow not hidden in IE 9/10/11.
+ */
+svg:not(:root) {
+  overflow: hidden;
+}
+
+/* Grouping content
+   ========================================================================== */
+/**
+ * Address margin not present in IE 8/9 and Safari.
+ */
+figure {
+  margin: 1em 40px;
+}
+
+/**
+ * Address differences between Firefox and other browsers.
+ */
+hr {
+  -webkit-box-sizing: content-box;
+          box-sizing: content-box;
+  height: 0;
+}
+
+/**
+ * Contain overflow in all browsers.
+ */
+pre {
+  overflow: auto;
+}
+
+/**
+ * Address odd `em`-unit font size rendering in all browsers.
+ */
+code,
+kbd,
+pre,
+samp {
+  font-family: monospace, monospace;
+  font-size: 1em;
+}
+
+/* Forms
+   ========================================================================== */
+/**
+ * Known limitation: by default, Chrome and Safari on OS X allow very limited
+ * styling of `select`, unless a `border` property is set.
+ */
+/**
+ * 1. Correct color not being inherited.
+ *    Known issue: affects color of disabled elements.
+ * 2. Correct font properties not being inherited.
+ * 3. Address margins set differently in Firefox 4+, Safari, and Chrome.
+ */
+button,
+input,
+optgroup,
+select,
+textarea {
+  color: inherit;
+  /* 1 */
+  font: inherit;
+  /* 2 */
+  margin: 0;
+  /* 3 */
+}
+
+/**
+ * Address `overflow` set to `hidden` in IE 8/9/10/11.
+ */
+button {
+  overflow: visible;
+}
+
+/**
+ * Address inconsistent `text-transform` inheritance for `button` and `select`.
+ * All other form control elements do not inherit `text-transform` values.
+ * Correct `button` style inheritance in Firefox, IE 8/9/10/11, and Opera.
+ * Correct `select` style inheritance in Firefox.
+ */
+button,
+select {
+  text-transform: none;
+}
+
+/**
+ * 1. Avoid the WebKit bug in Android 4.0.* where (2) destroys native `audio`
+ *    and `video` controls.
+ * 2. Correct inability to style clickable `input` types in iOS.
+ * 3. Improve usability and consistency of cursor style between image-type
+ *    `input` and others.
+ */
+button,
+html input[type="button"],
+input[type="reset"],
+input[type="submit"] {
+  -webkit-appearance: button;
+  /* 2 */
+  cursor: pointer;
+  /* 3 */
+}
+
+/**
+ * Re-set default cursor for disabled elements.
+ */
+button[disabled],
+html input[disabled] {
+  cursor: default;
+}
+
+/**
+ * Remove inner padding and border in Firefox 4+.
+ */
+button::-moz-focus-inner,
+input::-moz-focus-inner {
+  border: 0;
+  padding: 0;
+}
+
+/**
+ * Address Firefox 4+ setting `line-height` on `input` using `!important` in
+ * the UA stylesheet.
+ */
+input {
+  line-height: normal;
+}
+
+/**
+ * It's recommended that you don't attempt to style these elements.
+ * Firefox's implementation doesn't respect box-sizing, padding, or width.
+ *
+ * 1. Address box sizing set to `content-box` in IE 8/9/10.
+ * 2. Remove excess padding in IE 8/9/10.
+ */
+input[type="checkbox"],
+input[type="radio"] {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  /* 1 */
+  padding: 0;
+  /* 2 */
+}
+
+/**
+ * Fix the cursor style for Chrome's increment/decrement buttons. For certain
+ * `font-size` values of the `input`, it causes the cursor style of the
+ * decrement button to change from `default` to `text`.
+ */
+input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button {
+  height: auto;
+}
+
+/**
+ * 1. Address `appearance` set to `searchfield` in Safari and Chrome.
+ * 2. Address `box-sizing` set to `border-box` in Safari and Chrome
+ *    (include `-moz` to future-proof).
+ */
+input[type="search"] {
+  -webkit-appearance: textfield;
+  /* 1 */
+  -webkit-box-sizing: content-box;
+  /* 2 */
+  box-sizing: content-box;
+}
+
+/**
+ * Remove inner padding and search cancel button in Safari and Chrome on OS X.
+ * Safari (but not Chrome) clips the cancel button when the search input has
+ * padding (and `textfield` appearance).
+ */
+input[type="search"]::-webkit-search-cancel-button,
+input[type="search"]::-webkit-search-decoration {
+  -webkit-appearance: none;
+}
+
+/**
+ * Define consistent border, margin, and padding.
+ */
+fieldset {
+  border: 1px solid #c0c0c0;
+  margin: 0 2px;
+  padding: 0.35em 0.625em 0.75em;
+}
+
+/**
+ * 1. Correct `color` not being inherited in IE 8/9/10/11.
+ * 2. Remove padding so people aren't caught out if they zero out fieldsets.
+ */
+legend {
+  border: 0;
+  /* 1 */
+  padding: 0;
+  /* 2 */
+}
+
+/**
+ * Remove default vertical scrollbar in IE 8/9/10/11.
+ */
+textarea {
+  overflow: auto;
+}
+
+/**
+ * Don't inherit the `font-weight` (applied by a rule above).
+ * NOTE: the default cannot safely be changed in Chrome and Safari on OS X.
+ */
+optgroup {
+  font-weight: bold;
+}
+
+/* Tables
+   ========================================================================== */
+/**
+ * Remove most spacing between table cells.
+ */
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+td,
+th {
+  padding: 0;
+}
+
+/* responsive font sizing */
+html {
+  font-size: 16px;
+}
+
+@media screen and (min-width: 400px) {
+  html {
+    font-size: calc(16px + 10 * ((100vw - 400px) / 600));
+  }
+}
+
+@media screen and (min-width: 1000px) {
+  html {
+    font-size: 26px;
+  }
+}
+
+/* basic styles */
+body * {
+  -webkit-backface-visibility: hidden;
+}
+
+body *:before, body *:after {
+  -webkit-backface-visibility: hidden;
+}
+
+body {
+  background-color: #fbf9f7;
+  cursor: none;
+  font-family: "BlackerPro", Times, serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+::-moz-selection {
+  background-color: #f19694;
+}
+
+::selection {
+  background-color: #f19694;
+}
+
+.wrapper {
+  overflow: hidden;
+  position: relative;
+}
+
+.clear::after {
+  clear: both;
+  content: '';
+  display: table;
+}
+
+/* headlines */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  line-height: 1.2;
+  margin-top: 0;
+}
+
+p + h2,
+p + h3,
+p + h4,
+p + h5,
+p + h6 {
+  margin-top: 2.25em;
+}
+
+h1,
+h2 {
+  font-size: 2rem;
+  font-weight: bold;
+}
+
+@media (min-width: 1000px) {
+  h1,
+  h2 {
+    font-size: 4.5vw;
+  }
+}
+
+p,
+ul,
+ol,
+table {
+  font-size: 1rem;
+  line-height: 1.4;
+  margin: 0 0 1em 0;
+}
+
+p:last-child,
+ul:last-child,
+ol:last-child,
+table:last-child {
+  margin-bottom: 0;
+}
+
+@media (min-width: 1000px) {
+  p,
+  ul,
+  ol,
+  table {
+    font-size: 1.75vw;
+  }
+}
+
+.intro {
+  font-size: 1.3rem;
+}
+
+@media (min-width: 1000px) {
+  .intro {
+    font-size: 2.7vw;
+  }
+}
+
+/* mark */
+mark {
+  background-color: transparent;
+  position: relative;
+}
+
+mark::after {
+  background-color: #f6c7c6;
+  bottom: 0.25em;
+  content: '';
+  height: 0.5em;
+  left: 0;
+  position: absolute;
+  right: 0;
+  width: 100%;
+  z-index: -1;
+}
+
+/* links */
+a {
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
+  background-color: transparent;
+  color: #000;
+  cursor: none;
+  display: inline;
+  position: relative;
+  text-decoration: none;
+  z-index: 1;
+}
+
+a::after {
+  background-color: #f6c7c6;
+  bottom: 0.25em;
+  content: '';
+  height: 0.5em;
+  left: 0;
+  position: absolute;
+  right: 0;
+  -webkit-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+  width: 100%;
+  z-index: -1;
+}
+
+a:hover, a:focus {
+  color: #fbf9f7;
+  outline: 0;
+}
+
+a:hover::after, a:focus::after {
+  background-color: #e10100;
+  color: #fbf9f7;
+  height: 1.3em;
+  -webkit-transform: translateY(0.3em);
+          transform: translateY(0.3em);
+}
+
+a[href^=tel] {
+  cursor: text;
+}
+
+.remove-link-style, .header-logo, .these-are-not-the-droids-youre-looking-for {
+  color: inherit;
+}
+
+.remove-link-style::after, .header-logo::after, .these-are-not-the-droids-youre-looking-for::after {
+  background-color: transparent;
+  position: static;
+  width: inherit;
+}
+
+/* lists */
+ul,
+ol {
+  list-style: none;
+  list-style-image: url(data:image/gif;10064,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7);
+  padding-left: 0;
+}
+
+li {
+  margin-bottom: 0.3em;
+  padding-left: 1.5em;
+  position: relative;
+}
+
+ol {
+  counter-reset: ol-counter;
+}
+
+ol li::before {
+  color: #e10100;
+  content: counter(ol-counter, decimal-leading-zero) "";
+  counter-increment: ol-counter;
+  display: inline-block;
+  font-weight: bold;
+  margin-left: -2em;
+  margin-right: 0.6em;
+  width: 1.43em;
+}
+
+ul li::before {
+  content: '◆';
+  font-size: 0.7em;
+  left: 0;
+  position: absolute;
+  top: 0.3em;
+}
+
+.header {
+  background-color: #e10100;
+  position: relative;
+  width: 100%;
+  z-index: 10;
+  display: none;
+}
+
+.header .skip,
+.header .skip:link {
+  -webkit-transition: top, 0.3s;
+  transition: top, 0.3s;
+  background: #e10100;
+  color: #000;
+  left: 0;
+  letter-spacing: 1px;
+  line-height: 1.75;
+  padding: 10px 0;
+  position: fixed;
+  text-align: center;
+  text-decoration: none;
+  text-transform: uppercase;
+  top: -11em;
+  width: 100%;
+  z-index: 20;
+}
+
+.header a.skip:focus,
+.header a.skip:active {
+  top: 0;
+}
+
+.header-logo {
+  display: block;
+}
+
+.header-logo__image {
+  height: 90px;
+  width: auto;
+}
+
+.header-hamburger {
+  font-size: 40px;
+  height: 40px;
+  width: 40px;
+}
+
+/* padding */
+.add-padding,
+.add-padding-top {
+  padding-top: 5rem;
+}
+
+.add-padding,
+.add-padding-bottom {
+  padding-bottom: 5rem;
+}
+
+.add-padding--medium,
+.add-padding-top--medium {
+  padding-top: 3rem;
+}
+
+.add-padding--medium,
+.add-padding-bottom--medium {
+  padding-bottom: 3rem;
+}
+
+.add-padding--small,
+.add-padding-top--small {
+  padding-top: 1.5rem;
+}
+
+.add-padding--small,
+.add-padding-bottom--small {
+  padding-bottom: 1.5rem;
+}
+
+/* mail encryption */
+.these-are-not-the-droids-youre-looking-for::after {
+  content: attr(data-name) "@" attr(data-domain) "." attr(data-tld);
+}
+
+/* emoji */
+.emoji-whitespace {
+  font-size: 3vw;
+  margin-bottom: 0.5em;
+  text-align: center;
+}
+
+.cursor {
+  display: none;
+}
+
+.no-touchevents .cursor {
+  background-color: #1af8f7;
+  border-radius: 50%;
+  display: block;
+  height: 30px;
+  left: 0;
+  position: fixed;
+  top: 0;
+  -webkit-transition: all 0.1s cubic-bezier(0, 0.95, 0.25, 0.99);
+  transition: all 0.1s cubic-bezier(0, 0.95, 0.25, 0.99);
+  width: 30px;
+  mix-blend-mode: difference;
+}
+
+.template {
+  background-color: #fbf9f7;
+  border-left: 2rem solid #e10100;
+  border-right: 2rem solid #fbf9f7;
+  min-height: calc(100vh - 8rem);
+  padding: 4rem 2rem;
+  position: relative;
+}
+
+@media (min-width: 1000px) {
+  .template {
+    border-left-width: 5vw;
+    border-right-width: 5vw;
+    min-height: calc(100vh - 20vw);
+    padding: 10vw 15vw;
+  }
+}
+
+.template--primary {
+  background-color: #e10100;
+  border-right-color: #e10100;
+  color: #fbf9f7;
+}
+
+.template--secondary {
+  background-color: #000;
+  border-right-color: #000;
+  color: #fbf9f7;
+}
+
+.template--secondary a {
+  color: #e10100;
+}
+
+.template--secondary a::after {
+  background-color: transparent;
+}
+
+.template--secondary a:hover, .template--secondary a:focus {
+  color: #fbf9f7;
+}
+
+.template--secondary a:hover, .template--secondary a:focus {
+  background-color: #e10100;
+  color: #fbf9f7;
+}
+
+.template__profile {
+  border-radius: 50%;
+  display: block;
+  margin: 0 auto 1.5rem;
+  width: 4rem;
+}
+
+@media (min-width: 1000px) {
+  .template__profile {
+    margin-bottom: 3vw;
+    width: 8vw;
+  }
+}
+
+.footer {
+  bottom: 0;
+  color: rgba(251, 249, 247, 0.5);
+  font-size: 0.7rem;
+  font-weight: bold;
+  left: 0;
+  padding: 0.5em 2rem;
+  position: absolute;
+  right: 0;
+  text-align: center;
+  z-index: 1;
+}
+
+@media (min-width: 1000px) {
+  .footer {
+    font-size: 1.2vw;
+    padding-left: 5vw;
+    padding-right: 5vw;
+  }
+}
+
+.footer a {
+  color: rgba(251, 249, 247, 0.5);
+}
+
+.footer a:hover, .footer a:focus, .footer a::after {
+  background-color: transparent;
+}
+
+.footer a:hover::after, .footer a:focus::after {
+  background-color: transparent;
+  color: #fbf9f7;
+}
+/*# sourceMappingURL=master.css.map */
